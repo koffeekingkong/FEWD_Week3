@@ -4,6 +4,31 @@ html, body {
 
 /*Default inline column styles*/
 /*https://davidwalsh.name/remove-whitespace-inline-block*/
+header {
+  display:flex;
+}
+
+header .card{
+  display:flex;
+  flex: 0 300px;
+}
+
+header nav{
+  display:flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+header nav a {
+  display:flex;
+  background: rgba(100,100,100,.5);
+  border: 1px solid black;
+  margin-left:20px;
+  padding: 10px 30px;
+}
+
 main {
   width: 100%;
   font-size: 0;
@@ -15,15 +40,19 @@ main {
 }
 .content {
   width: 60%;
+  height: 240px;
 }
 .sidebar {
   width: 20%;
+  height: 440px;
 }
 
 /*Flexbox detection with Modernizr*/
 .flexbox.flexwrap main {
   display: flex;
 }
+
+
 
 .flexbox.flexwrap .content {
   display: flex;
@@ -37,6 +66,8 @@ main {
 }
 
 
+
+
 .placeholder {
   background: rgba(100,100,100,.5);
   border: 5px solid white;
@@ -44,8 +75,4 @@ main {
   min-height: 40px;
   box-sizing: border-box;
   overflow: hidden;
-}
-
-.sidebar, .content{
-  min-height: 240px;
 }
