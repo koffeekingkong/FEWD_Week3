@@ -10,35 +10,40 @@ Developer @GA in NYC
 /* SETUP
 /*******************************************/
 
+
 /* Box Model Hack */
+
 * {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
+  -moz-box-sizing: border-box;
+  /* Firexfox */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box;
+  /* IE */
 }
 
 /* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
 
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
 .clear {
   clear: both;
 }
-
 .alignright {
   float: right;
-  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+  padding: 0 0 10px 10px;
+  /* note the padding around a right floated image */
 }
-
 .alignleft {
   float: left;
-  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+  padding: 0 10px 10px 0;
+  /* note the padding around a left floated image */
 }
 
 /******************************************
@@ -46,30 +51,197 @@ Developer @GA in NYC
 /*******************************************/
 
 body {
-     color: #000;
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0efef;
 }
-
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
+
 /* Center the container */
+
 .container {
-  width: 960px;
+  width: 100%;
+  height:100%;
+  margin: 0 auto;
+}
+.background {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  background: url(../images/header_bg.jpg) no-repeat center top rgb(134, 141, 157);
+  background-size: cover;
+}
+h1 {
+  font-size: 30pt;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  padding: 90px;
+}
+.getbutton {
+  font-weight: 800;
+  font-size: 14pt;
+  vertical-align: middle;
+  background-color: #f9e42e;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
   margin: auto;
+  display: block;
+}
+.header{
+  background-color: #033048;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  padding:0px 40px 0px 40px;
+} /*parent*/
+.headerlogo, nav{
+  font-size: 34px;
+  font-weight: 800;
+  color: white;
+  display:flex;
+  flex:0 auto;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-header {
-
+.navlinks a{
+  color:#f9e42e;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0px 0px 0px 40px;
+} /*this is child*/
+h2 {
+  font-weight: 600;
+  font-size: 40px;
+  color: #033048;
+  margin: 0 auto;
+}
+.benefits {
+  width: 100%;
+  background-color: #f0efef;
+  height: auto;
+}
+.benefitstext {
+  padding: 40px 80px 40px 80px;
+  width: 100%;
+}
+.sentence {
+  font-weight: lighter;
+  font-size: 13pt;
+  color: #606161;
+  padding: 20px 0px 20px 0px;
+}
+ul {
+  padding: 20px;
+}
+li {
+  list-style: disc;
+  list-style-position: inside;
+  font-weight: lighter;
+  font-size: 13pt;
+  color: #606161;
+  line-height: 40px;
+  padding: 0px 10px 0 10px;
+}
+.testimonial {
+  background: url(../images/testimonial_bg.jpg) no-repeat center top rgb(134, 141, 157);
+  background-size: cover;
+  height: 100%;
+  padding: 40px;
+}
+blockquote {
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  font-size: 18pt;
+  color: white;
+  margin: 0 auto;
+  width: 400px;
+}
+.quote {
+  font-weight: 600;
+  text-align: center;
+  font-size: 18pt;
+  color: white;
+  margin: auto;
+  padding: 8px 0px 8px 0px;
+}
+/**post**/
+.post{
+  width:700px;
+  padding:20px ;
 }
 
+
+
+
+
+
+
+/**post**/
+.signup {
+  background-color: #f9e42e;
+  padding: 30px;
+  display:flex;
+  justify-content: center;
+}
+.signbutton {
+  font-weight: 800;
+  font-size: 12pt;
+  text-align: center;
+  color: white;
+  background-color: #033048;
+  border-radius: 5px;
+  padding: 13px 50px 13px 50px;
+}
 footer {
-
+  background-color: #121212;
+  height: 100%;
+  padding: 40px 80px 40px 80px;
 }
+.footerlogo {
+  font-weight: 800;
+  font-size: 24pt;
+  color: #f9e42e;
+  text-align: center;
+}
+.footertext {
+  font-weight: 600;
+  font-size: 9pt;
+  color: white;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.socialmedia{
+  text-align:center;
+}
+
+.fa-twitter{
+  padding:40px 15px 40px 0px;
+}
+
+.fa-facebook{
+  padding:40px 0px 40px 15px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a visited {
+  color: white;
+}
+
+
 
 /******************************************
 /* ADDITIONAL STYLES
